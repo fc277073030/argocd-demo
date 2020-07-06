@@ -2,14 +2,21 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: guestbook
-  namespace: argocd
 spec:
   destination:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: .
+    path: kustomize
     repoURL: 'https://github.com/fc277073030/argocd-demo.git'
     targetRevision: HEAD
+    kustomize:
+      images:
+        - harbor.51charts.com/library/ks-guestbook-demo
+      version: v0.1
   project: default
-
+  syncPolicy:
+    automated:
+      automated:
+        prune: false
+        selfHeal: false
