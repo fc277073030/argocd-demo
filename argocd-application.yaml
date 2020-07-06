@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: guestbook
+  namespace: argocd
 spec:
   destination:
     namespace: default
@@ -12,8 +13,7 @@ spec:
     targetRevision: HEAD
     kustomize:
       images:
-        - harbor.51charts.com/library/ks-guestbook-demo
-      version: v0.1
+        - harbor.51charts.com/library/ks-guestbook-demo:v0.2
   project: default
   syncPolicy:
     automated:
