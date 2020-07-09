@@ -6,7 +6,7 @@ resources:
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-#images:
-#  - name: harbor.51charts.com/library/ks-guestbook-demo
-#    newTag: v0.1
+images:
+  - name: registry.cn-hangzhou.aliyuncs.com/rd-pubilc/ks-guestbook-demo
+    newTag: 0.1
 
