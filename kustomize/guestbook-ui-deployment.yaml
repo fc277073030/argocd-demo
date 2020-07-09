@@ -14,7 +14,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-        - image: harbor.51charts.com/library/ks-guestbook-demo
+        - image: kregistry.cn-hangzhou.aliyuncs.com/rd-pubilc/ks-guestbook-demo
           name: guestbook-ui
           ports:
             - containerPort: 80
