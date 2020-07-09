@@ -13,7 +13,7 @@ spec:
     targetRevision: HEAD
     kustomize:
       images:
-        - harbor.51charts.com/library/ks-guestbook-demo:v0.2
+        - kregistry.cn-hangzhou.aliyuncs.com/rd-pubilc/ks-guestbook-demo:0.2
   project: default
   syncPolicy:
     automated:
